@@ -10,7 +10,7 @@ const HeaderSpan = ({ text }) => (
 
 const Header = () => (
   <div className={styles.header}>
-    <motion.h1 className={styles.line} initial="hidden" animate="show" variants={animations.title}>
+    <motion.h1 className={styles.title} initial="hidden" animate="show" variants={animations.title}>
       <div className={styles.line}><HeaderSpan text="Hello," /></div>
       <div className={styles.line}>
         <HeaderSpan text="My" />
