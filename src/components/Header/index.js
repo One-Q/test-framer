@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import PropTypes from 'prop-types';
 
 import styles from './Header.module.css';
 import animations from './animations';
@@ -7,6 +8,10 @@ import animations from './animations';
 const HeaderSpan = ({ text }) => (
   <motion.span variants={animations.span}>{text}</motion.span>
 );
+
+HeaderSpan.propTypes = {
+  text: PropTypes.string.isRequired,
+};
 
 const Header = () => (
   <div className={styles.header}>

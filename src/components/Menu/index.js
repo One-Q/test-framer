@@ -1,6 +1,7 @@
 /* eslint-disable react/jsx-props-no-spreading */
 import React, { useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
+import PropTypes from 'prop-types';
 
 import styles from './Menu.module.css';
 import animations from './animations';
@@ -20,6 +21,11 @@ const MenuItem = ({ link, text }) => (
     <motion.span variants={animations.menuItemSpan} className={styles.underline} />
   </motion.li>
 );
+
+MenuItem.propTypes = {
+  link: PropTypes.string.isRequired,
+  text: PropTypes.string.isRequired,
+};
 
 const Menu = () => {
   const [isOpen, setIsOpen] = useState(false);
