@@ -12,12 +12,13 @@ const animations = {
   },
   span: {
     hidden: {
-      opacity: 0,
-      y: 20,
+      y: 85,
     },
     show: {
-      opacity: 1,
       y: 0,
+      transition: {
+        ease: 'easeInOut',
+      },
     },
   },
 };

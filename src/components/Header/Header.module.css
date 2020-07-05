@@ -13,9 +13,14 @@
   overflow: hidden;
   position: relative;
   display: flex;
+  font-weight: normal;
 }
 
 .line span {
   margin-right: 15px;
   display: block;
+}
+
+.boldSpan {
+  font-weight: bold;
 }

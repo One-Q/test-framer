@@ -5,12 +5,17 @@ import PropTypes from 'prop-types';
 import styles from './Header.module.css';
 import animations from './animations';
 
-const HeaderSpan = ({ text }) => (
-  <motion.span variants={animations.span}>{text}</motion.span>
+const HeaderSpan = ({ text, className }) => (
+  <motion.span variants={animations.span} className={className}>{text}</motion.span>
 );
 
 HeaderSpan.propTypes = {
   text: PropTypes.string.isRequired,
+  className: PropTypes.string,
+};
+
+HeaderSpan.defaultProps = {
+  className: '',
 };
 
 const Header = () => (
@@ -22,7 +27,7 @@ const Header = () => (
         <HeaderSpan text="name" />
         <HeaderSpan text="is" />
       </div>
-      <div className={styles.line}><HeaderSpan text="Quentin" /></div>
+      <div className={styles.line}><HeaderSpan className={styles.boldSpan} text="Quentin" /></div>
     </motion.h1>
   </div>
 );
