@@ -31,6 +31,7 @@ const animations = {
     },
     hover: {
       width: '100%',
+      transition: { ease: 'easeInOut' },
     },
   },
 };

@@ -1,9 +1,5 @@
 .menuContainer {
-  min-width: 100vw;
-  min-height: 100vh;
-  position: absolute;
-  top: 0;
-  left: 0;
+  
 }
 
 .toggleButton {
@@ -18,9 +14,13 @@
   height: 50px;
   padding: 0;
   border-radius: 100%;
+  z-index: 10;
 }
 
 .menuList {
+  position: absolute;
+  top: 0;
+  left: 0;
   margin: 0;
   padding: 0;
   background-color: #0678EC;
